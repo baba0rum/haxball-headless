@@ -1,10 +1,12 @@
-var room = HBInit({
+window.onHBLoaded = () => {
+  const room = window.HBInit({
 	roomName: "18-25 JVC ISSOU",
 	maxPlayers: 30,
 	password: "1825",
 	public: true,
 	noPlayer: true
 });
+
 room.setDefaultStadium("Big");
 room.setScoreLimit(5);
 room.setTimeLimit(0);
@@ -48,3 +50,9 @@ room.onPlayerChat = function(player, message) {
 	}
 	
 }
+
+
+}
+// To make sure room is initialized
+if (typeof window.HBInit === 'function') window.onHBLoaded()
+
