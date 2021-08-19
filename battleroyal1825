@@ -149,11 +149,7 @@
 						this.room.setPlayerAdmin(a.id, false)
 						return false
 					}
-					if (message == "adminremove")
-					{
-						this.room.setPlayerAdmin(a.id, false)
-						return false
-					}
+			
 					
 			
 					
